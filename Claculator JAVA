@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Calculator {
+
+    Double add(double num1,double num2){
+        double addition = num1 + num2;
+        return addition; 
+    }
+public static void main (String[] args) {
+    Calculator ob1 = new Calculator();
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("enter first number :");
+    double num1 = sc.nextDouble();
+
+    System.out.println("enter second number :");
+    double num2 = sc.nextDouble();
+
+    System.out.println("enter oprator :");
+    char operator = sc.next().charAt(0);
+
+    switch (operator){
+        case '+':
+        System.out.println("result "+ob1.add(num1, num2));
+        break;
+        default :
+        System.out.println("inavlid operator");
+    }
+}   
+}
