@@ -1,0 +1,27 @@
+class Vehicle{
+    String vehicle_type;
+    int wheels;
+    String model;
+}
+
+class Car extends Vehicle{
+    String vehicle_type = "fourwheels";
+    int wheels = 4;
+    void run(){
+        System.out.println("running");
+    }
+}
+
+class BMW extends Car {
+    String model ="M5";
+}
+
+public class Demo{
+    public static void main(String[]args){
+        BMW ob = new BMW();
+        System.out.println("vehicle type :"+ ob.vehicle_type);
+        System.out.println("wheels :"+ ob.wheels);
+        System.out.println("Model :"+ ob.model);
+        ob.run();
+    }
+}
