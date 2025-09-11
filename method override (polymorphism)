@@ -1,0 +1,41 @@
+class shape {
+    double area() {
+        return 0;
+    }
+}
+
+class circle extends shape {
+    double radius;
+
+    circle(double radius) {
+        this.radius = radius;
+    }
+
+    double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+class rectangle extends shape {
+    double length;
+    double width;
+
+    rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    double area() {
+        return length * width;
+    }
+}
+
+public class demo {
+    public static void main(String[] args) {
+        circle s1 = new circle(10);
+        System.out.println("Area of circle is :" + s1.area());
+
+        rectangle ob = new rectangle(10, 20);
+        System.out.println("Area of rectangle is :" + ob.area());
+    }
+}
